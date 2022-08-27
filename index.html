@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baap Er Bank</title>
+    <!-- Tailwind css CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- ________________________ -->
+</head>
+<body>
+    <header class="header-section">
+        <div class="header-container my-8 bg-gray-300 py-3">
+            <h1 class="text-5xl text-center font-bold">My <span class="text-blue-700 border-b-2 border-cyan-700 font-bold">Baap-Er-Bank</span>.com !!!</h1>
+        </div>
+
+    </header>
+    <main>
+        <section class="login-section bg-zinc-700 mt-20 py-20 px-48">
+            <div class="login-container bg-gray-500 py-8 px-40 rounded-md">
+                <h3 class="mb-4 text-xl font-bold ">Please Login</h3>
+                <div class="flex flex-col justify-start items-start px-8">
+                    <input type="email" name="" id="email-input" class="mb-4 p-1.5 rounded-lg w-full" placeholder="Enter your Email" required>
+                    <input type="password" name="" id="password-input" class="mb-4 p-1.5 rounded-lg w-full"  placeholder="Enter your Password" required>
+                    <button class="bg-blue-900 px-4 py-2 text-slate-50 rounded-md hover:bg-blue-700" onclick="onSubmit()">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./js/login.js"></script>
+</body>
+</html>

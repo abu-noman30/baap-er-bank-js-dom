@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home@(Baap-Er-Bank)</title>
+     <!-- Tailwind css CDN Link -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+       tailwind.config = {
+         theme: {
+           extend: {
+             colors: {
+               clifford: '#da373d',
+             }
+           }
+         }
+       }
+     </script>
+     <!-- ________________________ -->
+</head>
+<body>
+    <header class="header-section">
+        <div class="header-container my-8 bg-gray-300 py-3">
+            <h1 class="text-5xl text-center font-bold">Let's Get Some <span class="text-blue-700 border-b-2 border-blue-900">Money</span>.....!!!</h1>
+        </div>
+    </header>
+    <main class=" bg-teal-300">
+        <section class="display-section mt-8 ">
+            <div class="display-container grid grid-cols-3 gap-6 px-44 py-12 text-center">
+                <div class="deposit-display bg-orange-900 px-4 py-2.5 rounded-lg">
+                    <h4 class="text-3xl font-semibold text-white mb-3">Total Deposit:</h4>
+                    <h2 class="text-5xl font-semibold text-white pl-4" >$<span id="deposit-amount">00</span></h2>
+                </div>
+                <div class="withdraw-display bg-teal-900 px-4 py-2.5 rounded-lg">
+                    <h4 class="text-3xl font-semibold text-white mb-3">Total Withdraw:</h4>
+                    <h2 class="text-5xl font-semibold text-white pl-4">$<span id="withdraw-amount">00</span></h2>
+                </div>
+                <div class="balance-display bg-rose-600 px-4 py-2.5 rounded-lg">
+                    <h4 class="text-3xl font-semibold text-white mb-3">Current Balance:</h4>
+                    <h2 class="text-5xl font-semibold text-white pl-4">$<span id="tolal-balance">100</span></h2>
+                </div>
+            </div>
+        </section>
+        <section class="amount-section">
+            <div class="amount-container grid grid-cols-2 gap-6 px-44 pb-4">
+                <div class="deposit-amount bg-blue-700 px-6 py-8 rounded-lg">
+                    <h4 class="text-2xl font-semibold text-white mb-4 ml-8">Please Deposit</h4>
+                    <div class="input-container flex flex-col items-start px-8">
+                        <input type="number" name="" id="deposit-input" placeholder="$ Ammount you want to Deposite"  class="w-4/5 h-8 rounded-md px-3 mb-4 mx-auto">
+                        <button class="bg-blue-900 text-white font-medium px-4 py-2 rounded-lg ml-9 hover:bg-blue-300 hover:text-black" onclick="onDeposit()">Deposit</button>
+                    </div>
+                </div>
+                <div class="withdraw-amount bg-blue-700 px-6 py-8 rounded-lg">
+                    <h4 class="text-2xl font-semibold text-white mb-4 ml-8">Please Withdraw</h4>
+                    <div class="input-container flex flex-col items-start px-8 ">
+                        <input type="number" name="" id="withdraw-input" placeholder="$ Ammount you want to Withdraw"  class="w-4/5 h-8 rounded-md px-3 mb-4 mx-auto">
+                        <button class="bg-blue-900 text-white font-medium px-4 py-2 rounded-lg ml-9 hover:bg-blue-300 hover:text-black" onclick="onWithdraw()">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="logout-section ">
+            <div class="logout-container pb-2.5">
+                <button class="bg-neutral-900 text-white font-medium px-4 py-2 rounded-lg hover:bg-blue-300 hover:text-black block mx-auto " onclick="onLogout()">Logout</button>
+            </div>
+        </section>
+    </main>  
+    <footer>
+    </footer>
+
+    <script src="./js/home.js"></script>
+</body>
+</html>
